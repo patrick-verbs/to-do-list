@@ -55,7 +55,7 @@ toDoList.addTask(task2);
 
 $(document).ready(function () {
   $("form#to-do-list").submit(function(event) {
-    event.preventDefault;
+    event.preventDefault();
     const task = new Task(
       $("input#new-task").val(),
       $("input#new-task-category").val()
@@ -64,8 +64,8 @@ $(document).ready(function () {
     toDoList.addTask(task);
     console.log(toDoList.tasks[3].task);
     console.log(toDoList.tasks[3].category);
-    // Not working -- probably the wrong calls to toDoList  v
-    $("#task-list").append(`<li><span class="task">${toDoList.tasks[3].task}</span> <span class="category">${toDoList.task[3].category}</span></li>`);
+   
+    $("#task-list").append(`<li><span class="task">${toDoList.tasks[3].task}</span> <span class="category">${toDoList.tasks[3].category}</span></li>`);
   });
 
 });
