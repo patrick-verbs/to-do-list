@@ -47,14 +47,19 @@ function Task(task, category) {
 
 // UI logic
 ///////////
-
-// Console test
-///////////////
 let toDoList = new ToDoList;
 let task1 = new Task("Pay rent", "Bills")
 let task2 = new Task("File taxes", "Income")
 toDoList.addTask(task1);
 toDoList.addTask(task2);
+
+$(document).ready(function () {
+  
+  $("ul#task-list").append(`<li><span class="task">${task1.task}</span> (<span class="category">${task1.category}</span>)</li>`);
+});
+
+// Console test
+///////////////
 // console.log(task1.id);
 
 // toDoList.toggleTaskComplete(task2.id);
