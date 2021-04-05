@@ -48,8 +48,36 @@ _No known bugs_
 
 _For any questions or comments, please reach out through GitHub._
 
-### License
+## License
 
 [MIT License](license)
 
 Copyright (c) [year] [names]
+
+## Tests
+
+Describe: ToDoList()
+
+Test:
+Code:
+
+Expected Output: 
+
+Describe: ToDoList.prototype.addTask()
+
+
+
+Describe: ToDoList.prototype.assignId()
+
+
+
+Describe: ToDoList.prototype.deleteTask()
+
+
+
+Describe: ToDoList.prototype.markTaskComplete()
+
+
+
+Describe: Task()
+

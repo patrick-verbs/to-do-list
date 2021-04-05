@@ -35,9 +35,6 @@ function Task(task, category) {
   this.completed = false;
 }
 
-
-
-
 // UI logic
 ///////////
 
