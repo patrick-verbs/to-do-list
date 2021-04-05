@@ -24,8 +24,12 @@ ToDoList.prototype.deleteTask = function(id) {
   return true;
 }
 
-ToDoList.prototype.markTaskComplete = function(id){
-  this.tasks[id].completed = true;
+ToDoList.prototype.toggleTaskComplete = function(id){
+  if(this.tasks[id].completed){
+    this.tasks[id].completed = false;
+  } else {
+    this.tasks[id].completed = true;
+  }
 }
 
 // ----- list item specifics, e.g. categories like bills, groceries?
@@ -45,5 +49,8 @@ let task1 = new Task("Pay rent", "Bills")
 let task2 = new Task("File taxes", "Income")
 toDoList.addTask(task1);
 toDoList.addTask(task2);
-toDoList.markTaskComplete(1);
+toDoList.toggleTaskComplete(1);
+console.log(task1.completed);
+toDoList.toggleTaskComplete(1);
+console.log(task1.completed);
 console.log(task1.id);
