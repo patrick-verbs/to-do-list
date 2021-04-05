@@ -54,8 +54,16 @@ toDoList.addTask(task1);
 toDoList.addTask(task2);
 
 $(document).ready(function () {
-  
-  $("ul#task-list").append(`<li><span class="task">${task1.task}</span> (<span class="category">${task1.category}</span>)</li>`);
+  $("form#to-do-list").submit(function(event) {
+    event.preventDefault;
+    const task = (
+      $("#new-task").val(),
+      $("#new-task-category").val()
+    );
+    toDoList.addTask(task);
+  });
+  // Not working -- probably the wrong calls to toDoList  v
+  $("ul#task-list").append(`<li><span class="task">${toDoList.3.task}</span> (<span class="category">${toDoList.3.category}</span>)</li>`);
 });
 
 // Console test
