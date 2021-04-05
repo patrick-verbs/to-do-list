@@ -32,6 +32,12 @@ ToDoList.prototype.toggleTaskComplete = function(id){
   }
 }
 
+ToDoList.prototype.findTasksInCategory = function(category){
+  this.tasks.forEach(function(element){
+    console.log(element);
+  });
+}
+
 // ----- list item specifics, e.g. categories like bills, groceries?
 function Task(task, category) {
   this.task = task;
@@ -49,9 +55,10 @@ let task1 = new Task("Pay rent", "Bills")
 let task2 = new Task("File taxes", "Income")
 toDoList.addTask(task1);
 toDoList.addTask(task2);
-console.log(task1.id);
+// console.log(task1.id);
 
-toDoList.toggleTaskComplete(task2.id);
-console.log(task2.completed);
-toDoList.toggleTaskComplete(task2.id);
-console.log(task2.completed);
+// toDoList.toggleTaskComplete(task2.id);
+// console.log(task2.completed);
+// toDoList.toggleTaskComplete(task2.id);
+// console.log(task2.completed);
+toDoList.findTasksInCategory();
