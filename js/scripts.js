@@ -42,7 +42,7 @@ function Task(task, category) {
 ///////////////
 let toDoList = new ToDoList;
 let task1 = new Task("Pay rent", "Bills")
-let task2 = new Task("File taxes", "Finances")
+let task2 = new Task("File taxes", "Income")
 toDoList.addTask(task1);
 toDoList.addTask(task2);
 toDoList.markTaskComplete(1);

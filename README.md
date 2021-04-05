@@ -58,16 +58,53 @@ Copyright (c) [year] [names]
 
 Describe: ToDoList()
 
-Test:
-Code:
+Test: It instantiates a new "to do list" object.
 
-Expected Output: 
+Code:
+```
+let toDoList = new ToDoList;
+console.log(toDoList);
+```
+Expected Output:
+```
+ToDoList { tasks: {}, currentId: 0 }
+```
 
 Describe: ToDoList.prototype.addTask()
 
+Test: It adds a new "task" object to the "to do list" object.
 
+Code:
+```let toDoList = new ToDoList;
+let task1 = new Task("Pay rent", "Bills");
+toDoList.addTask(task1);
+console.log(toDoList);
+```
+Expected Output:
+```
+ToDoList {
+  tasks: {
+    '1': Task {
+      task: 'Pay rent',
+      category: 'Bills',
+      completed: false,
+      id: 1
+    }
+  },
+  currentId: 1
+}
+```
 
 Describe: ToDoList.prototype.assignId()
+
+Test: It assigns an integer ID to each Task object in a ToDoList object.
+
+Code:
+```
+```
+Expected Output:
+```
+```
 
 
 
