@@ -17,18 +17,24 @@ ToDoList.prototype.assignId = function() {
 }
 
 ToDoList.prototype.deleteTask = function(id) {
-  if this.tasks[id] === undefined) {
+  if (this.tasks[id] === undefined) {
     return false;
   }
   delete this.tasks[id];
   return true;
 }
 
+ToDoList.prototype.markTaskComplete = function(id){
+  this.tasks[id].completed = true;
+}
+
 // ----- list item specifics, e.g. categories like bills, groceries?
 function Task(task, category) {
   this.task = task;
   this.category = category;
+  this.completed = false;
 }
+
 
 
 
@@ -37,6 +43,10 @@ function Task(task, category) {
 
 // Console test
 ///////////////
-let ToDoList = new ToDoList;
+let toDoList = new ToDoList;
 let task1 = new Task("Pay rent", "Bills")
 let task2 = new Task("File taxes", "Finances")
+toDoList.addTask(task1);
+toDoList.addTask(task2);
+toDoList.markTaskComplete(1);
+console.log(toDoList);
