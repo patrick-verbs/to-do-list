@@ -46,4 +46,4 @@ let task2 = new Task("File taxes", "Income")
 toDoList.addTask(task1);
 toDoList.addTask(task2);
 toDoList.markTaskComplete(1);
-console.log(toDoList);
+console.log(task1.id);

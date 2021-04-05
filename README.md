@@ -101,9 +101,14 @@ Test: It assigns an integer ID to each Task object in a ToDoList object.
 
 Code:
 ```
+let toDoList = new ToDoList;
+let task1 = new Task("Pay rent", "Bills");
+toDoList.addTask(task1);
+console.log(task1.id);
 ```
 Expected Output:
 ```
+1
 ```
 
 
