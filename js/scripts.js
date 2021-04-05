@@ -64,6 +64,7 @@ $(document).ready(function () {
     toDoList.addTask(task);
     console.log(toDoList.tasks[3].task);
     console.log(toDoList.tasks[3].category);
+    console.log(Object.keys(toDoList.tasks).length);
    
     $("#task-list").append(`<li><span class="task">${toDoList.tasks[3].task}</span> <span class="category">${toDoList.tasks[3].category}</span></li>`);
   });
