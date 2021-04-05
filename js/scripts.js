@@ -49,8 +49,9 @@ let task1 = new Task("Pay rent", "Bills")
 let task2 = new Task("File taxes", "Income")
 toDoList.addTask(task1);
 toDoList.addTask(task2);
-toDoList.toggleTaskComplete(1);
-console.log(task1.completed);
-toDoList.toggleTaskComplete(1);
-console.log(task1.completed);
 console.log(task1.id);
+
+toDoList.toggleTaskComplete(task2.id);
+console.log(task2.completed);
+toDoList.toggleTaskComplete(task2.id);
+console.log(task2.completed);

@@ -117,9 +117,15 @@ Describe: ToDoList.prototype.deleteTask()
 
 
 
-Describe: ToDoList.prototype.markTaskComplete()
+Describe: ToDoList.prototype.toggleTaskComplete()
 
-
+Test: "It will assign completed for a ToDoList object true if it is currently assigned false, and false if it is currently assigned true."
+Code:
+    let toDoList = new ToDoList;
+    let task1 = new Task("Pay rent", "Bills");
+    toDoList.toggleTaskCompleted(task1.id);
+    task1.completed;
+Expected Output: true
 
 Describe: Task()
 
